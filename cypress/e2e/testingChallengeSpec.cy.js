@@ -3,12 +3,12 @@ Cypress.on('uncaught:exception', () => {
   return false;
 });
 
-describe('Testing Challenge 1', () => {
+describe('Testing Challenges', () => {
   beforeEach(() => {
     cy.visit('http://testingchallenges.thetestingmap.org/index.php');
   });
 
-  it('Empty string', () => {
+  it('Testing Challenges 1', () => {
     enteredInputValue.forEach((el, i) => {
       if (el === '') {
         cy.get('#firstname').clear();
