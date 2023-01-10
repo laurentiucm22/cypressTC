@@ -5,10 +5,8 @@ Cypress.on('uncaught:exception', () => {
 
 describe('Testing Challenge 1', () => {
   beforeEach(() => {
-    cy.visit('/');
+    cy.visit('http://testingchallenges.thetestingmap.org/index.php');
   });
-
-  // prettier-ignore
 
   it('Empty string', () => {
     enteredInputValue.forEach((el, i) => {
@@ -27,15 +25,12 @@ describe('Testing Challenge 1', () => {
           .find('li')
           .should('have.length', i + 1)
           .and('include.text', checksFound[i]);
+<<<<<<< Updated upstream
         cy.get('.values-tested');
+=======
+        cy.get('.values-tested').should('include.text', i + 1);
+>>>>>>> Stashed changes
       }
     });
   });
 });
-
-//empty value
-//average value
-//other chars the alphabetic
-// you use html tag
-// space in the middle
-// space
