@@ -17,7 +17,7 @@ describe('Testing Challenges', () => {
           .find('li')
           .should('have.length', i + 1)
           .and('include.text', checksFound[0]);
-        cy.get('.values-tested');
+        cy.get('.values-tested').should('be.visible');
       } else {
         cy.get('#firstname').type(el);
         cy.get('.button').click();
