@@ -1,4 +1,4 @@
-import { enteredInputValue, checksFound } from '../utils/constant.js';
+import { enteredInputValue, checksFound } from '../../utils/constant.js';
 Cypress.on('uncaught:exception', () => {
   return false;
 });
