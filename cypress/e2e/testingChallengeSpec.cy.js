@@ -1,14 +1,13 @@
 import { enteredInputValue, checksFound } from '../utils/constant.js';
-Cypress.on('uncaught:exception', () => {
-  return false;
-});
+import { uncaughtException } from '../utils/functions.js';
+uncaughtException();
 
-describe('Testing Challenges', () => {
+describe('Testing Challenges 1', () => {
   beforeEach(() => {
     cy.visit('http://testingchallenges.thetestingmap.org/index.php');
   });
 
-  it('Testing Challenges 1', () => {
+  it('Automate values', () => {
     enteredInputValue.forEach((el, i) => {
       if (el === '') {
         cy.get('#firstname').clear();
