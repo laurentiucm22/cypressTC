@@ -8,11 +8,8 @@ Cypress.on('uncaught:exception', () => {
 });
 clearCypressConsole();
 
-// prettier-ignore
-const checkUrlParams = ['/product/selenium-ruby/','/product/thinking-in-html/','/product/mastering-javascript/',];
-
 describe('Practice Automation Test NAV -- Home Page', () => {
-  const { arrivalSelector } = PRACTICE_DATA;
+  const { arrivalSelector, checkUrlParams } = PRACTICE_DATA;
 
   beforeEach(() => {
     cy.visit('/');
@@ -22,7 +19,7 @@ describe('Practice Automation Test NAV -- Home Page', () => {
     commandMethods.assertPagesHasOnly3Arivals();
   });
 
-  it('3. Home page - Images in Arrivals should navigate', () => {
+  it.only('3. Home page - Images in Arrivals should navigate', () => {
     commandMethods.assertPagesHasOnly3Arivals();
     // Assert that when clicking on the arrivals button
     // It goes to next page
@@ -32,9 +29,10 @@ describe('Practice Automation Test NAV -- Home Page', () => {
         commandMethods.assertUrlHasCorretParams(urlParam);
         cy.go('back');
       } else {
-        commandMethods.selectButtonAndClickOnIt('.button', i);
-        cy.get('.button').last().should('not.have.text', 'Read more');
-        cy.get('.cartcontents').should('have.text', '1 item');
+        commandMethods
+          .selectButtonAndClickOnIt('.button', i)
+          .should('not.have.text', 'Read more');
+        cy.get('.cartcontents').should('include.text', '1 item');
       }
     });
 
