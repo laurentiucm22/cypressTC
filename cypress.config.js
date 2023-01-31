@@ -7,6 +7,5 @@ module.exports = defineConfig({
     viewportWidth: 1920,
     viewportHeight: 1080,
     chromeWebSecurity: false,
-    baseUrl: 'http://practice.automationtesting.in/',
   },
 });
