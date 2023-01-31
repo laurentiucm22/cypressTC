@@ -29,15 +29,3 @@ export const checksFound = [
   'More than maximum values',
   'You looked at the page source',
 ];
-
-export const PRACTICE_DATA = {
-  homePageNav: {
-    selector: '#main-nav',
-    text: 'Shop',
-  },
-  shopPageNav: {
-    selector: '.woocommerce-breadcrumb',
-    text: 'Home',
-  },
-  arrivalSelector: '.products',
-};
