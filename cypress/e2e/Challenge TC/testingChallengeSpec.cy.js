@@ -1,6 +1,7 @@
-import { enteredInputValue, checksFound } from '../utils/constant.js';
-import { uncaughtException } from '../utils/functions.js';
-uncaughtException();
+import { enteredInputValue, checksFound } from '../../utils/constant';
+Cypress.on('uncaught:exception', () => {
+  return false;
+});
 
 describe('Testing Challenges 1', () => {
   beforeEach(() => {
