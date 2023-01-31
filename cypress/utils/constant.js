@@ -40,4 +40,9 @@ export const PRACTICE_DATA = {
     text: 'Home',
   },
   arrivalSelector: '.products',
+  checkUrlParams: [
+    '/product/selenium-ruby/',
+    '/product/thinking-in-html/',
+    '/product/mastering-javascript/',
+  ],
 };

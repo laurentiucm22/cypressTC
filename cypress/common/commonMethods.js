@@ -15,7 +15,7 @@ export class CommonMethods {
     cy.get(webElement).eq(number).first().click();
   }
   selectButtonAndClickOnIt(webElement, number) {
-    cy.get(webElement).eq(number).click();
+    return cy.get(webElement).eq(number).click();
   }
 
   assertUrlHasCorretParams(pramName) {
